@@ -40,7 +40,7 @@ BSTObject::BSTObject(BSTNode*& root)
 BSTObject::~BSTObject()
 {
 
-	Clear(_root);
+	//Clear(_root);
 
 }
 
@@ -95,15 +95,11 @@ void BSTObject::Delete(BSTNode* root, const int& x) noexcept
 		else if (N->left != nullptr && N->right != nullptr)
 		{
 
-			std::cout << "Branch B of Delete(...)" << std::endl;
 			BSTNode* inorder_successor = GetInorderSuccessor(root, N);
-			std::cout << "inorder_successor: " << inorder_successor << std::endl;
-			std::cout << "inorder_successor->key = " << inorder_successor->key << std::endl;
 
 			if (inorder_successor != nullptr)
 			{
 
-				std::cout << "Branch B(A) of Delete(...)" << std::endl;
 				BSTNode* temp = N;
 				inorder_successor = temp;
 				delete N;
@@ -140,29 +136,11 @@ void BSTObject::Delete(BSTNode* root, const int& x) noexcept
 //
 // Furthermore, to share the results to the developer: A boolean value is returned.
 // It will return true if the clear is successful. And otherwise, false.
-bool BSTObject::Clear(BSTNode* root)
+bool BSTObject::Clear(BSTNode*& root)
 {
 
-	if (root != _root)
-	{
+	// TODO
 
-		return false;
-
-	}
-	else if (root == nullptr)
-	{
-
-		return true;
-
-	}
-	else
-	{
-
-		Clear(root->left);
-		Clear(root->right);
-		delete root;
-
-	}
 }
 
 // Find(x) performs a lookup for a node with the key value, x.

@@ -36,7 +36,7 @@ public:
 	//
 	// Furthermore, to share the results to the developer: A boolean value is returned.
 	// It will return true if the clear is successful. And otherwise, false.
-	bool Clear(BSTNode* root);
+	bool Clear(BSTNode*& root);
 
 	// Find(root, x) performs a lookup for a node with the key value, x.
 	// If no such node is found, a null BSTNode is returned. Otherwise,
