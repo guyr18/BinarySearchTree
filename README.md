@@ -54,28 +54,28 @@ Following this, the describe functionality is callable from our **BSTObject** in
 We can achieve insertion by calling the **BSTObject.Insert(root, x)** method. It accepts a root object and a value x that we wish to insert.
 
 ```c++
-obj.Insert(root, 99);
+obj->Insert(root, 99);
 ```
 
 **Deletion**  
 Similarly, we deletion a key by calling the **BSTObject.Delete(root, x)** method. It also accepts a root object and a value x that we wish to insert.
 
 ```c++
-obj.Delete(root, 39);
+obj->Delete(root, 39);
 ```
 
 **Key Lookup**  
 We can perform a search or lookup operation by calling the **BSTObject.Find(root, x)** method.
 
 ```c++
-BSTNode* temp1 = obj.Find(root, 5); // returns null
-BSTNode* temp2 = obj.Find(root, 39); // returns corresponding BSTNode object
+BSTNode* temp1 = obj->Find(root, 5); // returns null
+BSTNode* temp2 = obj->Find(root, 39); // returns corresponding BSTNode object
 ```
 
 **Key Validation**  
 Lastly, we validate the existence of a particular key value by invoking the **BSTObject.Contains(root, x)** method.
 
 ```c++
-bool a = obj.Find(root, 62); // returns false
-bool b = obj.Find(root, 75); // returns true
+bool a = obj->Find(root, 62); // returns false
+bool b = obj->Find(root, 75); // returns true
 ```
